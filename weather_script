@@ -1,0 +1,13 @@
+#!/bin/bash
+# This script will output a 3 day forecast to a file
+
+# Creates weather file if it does not exist
+if ! [[ -f /home/vagrant/.config/reminders/reminder_list ]]
+then
+	touch /home/vagrant/weather
+fi
+
+# Moves output to weather file
+curl http://wttr.in/ > /home/vagrant/weather
+
+				

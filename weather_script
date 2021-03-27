@@ -1,0 +1,11 @@
+#!/bin/bash
+# This script will output a 3 day forecast to a file
+
+if ! [[ -f /home/vagrant/.config/reminders/reminder_list ]]
+then
+	touch /home/vagrant/weather
+fi
+
+curl http://wttr.in/ > /home/vagrant/weather
+echo "it ran brorooorroroor"
+				
